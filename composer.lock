@@ -952,6 +952,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v5.8.16",
             "source": {
                 "type": "git",
@@ -962,6 +963,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/83d57f9f9162ab476c43b9ec00d463ff12c578fd",
                 "reference": "83d57f9f9162ab476c43b9ec00d463ff12c578fd",
+=======
+            "version": "v5.8.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "8a34004aed6ff0aa4072360e3e5bd875edebc223"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8a34004aed6ff0aa4072360e3e5bd875edebc223",
+                "reference": "8a34004aed6ff0aa4072360e3e5bd875edebc223",
+>>>>>>> UserProfile
                 "shasum": ""
             },
             "require": {
@@ -1095,7 +1108,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2019-05-07T14:37:11+00:00"
+=======
+            "time": "2019-04-30T14:05:03+00:00"
+>>>>>>> UserProfile
         },
         {
             "name": "laravel/tinker",
@@ -2118,6 +2135,7 @@
         },
         {
             "name": "symfony/contracts",
+<<<<<<< HEAD
             "version": "v1.1.0",
             "source": {
                 "type": "git",
@@ -2128,6 +2146,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/contracts/zipball/d3636025e8253c6144358ec0a62773cae588395b",
                 "reference": "d3636025e8253c6144358ec0a62773cae588395b",
+=======
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/contracts.git",
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+>>>>>>> UserProfile
                 "shasum": ""
             },
             "require": {
@@ -2135,22 +2165,33 @@
             },
             "require-dev": {
                 "psr/cache": "^1.0",
+<<<<<<< HEAD
                 "psr/container": "^1.0",
                 "symfony/polyfill-intl-idn": "^1.10"
+=======
+                "psr/container": "^1.0"
+>>>>>>> UserProfile
             },
             "suggest": {
                 "psr/cache": "When using the Cache contracts",
                 "psr/container": "When using the Service contracts",
                 "symfony/cache-contracts-implementation": "",
+<<<<<<< HEAD
                 "symfony/event-dispatcher-implementation": "",
                 "symfony/http-client-contracts-implementation": "",
+=======
+>>>>>>> UserProfile
                 "symfony/service-contracts-implementation": "",
                 "symfony/translation-contracts-implementation": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.1-dev"
+=======
+                    "dev-master": "1.0-dev"
+>>>>>>> UserProfile
                 }
             },
             "autoload": {
@@ -2185,7 +2226,11 @@
                 "interoperability",
                 "standards"
             ],
+<<<<<<< HEAD
             "time": "2019-04-27T14:29:50+00:00"
+=======
+            "time": "2018-12-05T08:06:11+00:00"
+>>>>>>> UserProfile
         },
         {
             "name": "symfony/css-selector",
@@ -4527,6 +4572,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "7.5.11",
             "source": {
                 "type": "git",
@@ -4537,6 +4583,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/64cb33f5b520da490a7b13149d39b43cf3c890c6",
                 "reference": "64cb33f5b520da490a7b13149d39b43cf3c890c6",
+=======
+            "version": "7.5.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/134669cf0eeac3f79bc7f0c793efbc158bffc160",
+                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160",
+>>>>>>> UserProfile
                 "shasum": ""
             },
             "require": {
@@ -4607,7 +4665,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2019-05-14T04:53:02+00:00"
+=======
+            "time": "2019-04-19T15:50:46+00:00"
+>>>>>>> UserProfile
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

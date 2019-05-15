@@ -5,7 +5,11 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
+<<<<<<< HEAD
     * Generated on 2019-05-14 06:01:58.
+=======
+    * Generated on 2019-05-07 00:46:30.
+>>>>>>> UserProfile
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -35,6 +39,10 @@ namespace PHPSTORM_META {
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
+<<<<<<< HEAD
+=======
+        'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
+>>>>>>> UserProfile
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -116,7 +124,13 @@ namespace PHPSTORM_META {
         'composer' => \Illuminate\Support\Composer::class,
         'cookie' => \Illuminate\Cookie\CookieJar::class,
         'db' => \Illuminate\Database\DatabaseManager::class,
+<<<<<<< HEAD
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+=======
+        'db.connection' => \Illuminate\Database\MySqlConnection::class,
+        'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+        'encrypter' => \Illuminate\Encryption\Encrypter::class,
+>>>>>>> UserProfile
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -174,6 +188,10 @@ namespace PHPSTORM_META {
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
+<<<<<<< HEAD
+=======
+        'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
+>>>>>>> UserProfile
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -255,7 +273,13 @@ namespace PHPSTORM_META {
         'composer' => \Illuminate\Support\Composer::class,
         'cookie' => \Illuminate\Cookie\CookieJar::class,
         'db' => \Illuminate\Database\DatabaseManager::class,
+<<<<<<< HEAD
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+=======
+        'db.connection' => \Illuminate\Database\MySqlConnection::class,
+        'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+        'encrypter' => \Illuminate\Encryption\Encrypter::class,
+>>>>>>> UserProfile
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -313,6 +337,10 @@ namespace PHPSTORM_META {
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
+<<<<<<< HEAD
+=======
+        'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
+>>>>>>> UserProfile
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -394,7 +422,13 @@ namespace PHPSTORM_META {
         'composer' => \Illuminate\Support\Composer::class,
         'cookie' => \Illuminate\Cookie\CookieJar::class,
         'db' => \Illuminate\Database\DatabaseManager::class,
+<<<<<<< HEAD
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+=======
+        'db.connection' => \Illuminate\Database\MySqlConnection::class,
+        'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+        'encrypter' => \Illuminate\Encryption\Encrypter::class,
+>>>>>>> UserProfile
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -452,6 +486,10 @@ namespace PHPSTORM_META {
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
+<<<<<<< HEAD
+=======
+        'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
+>>>>>>> UserProfile
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -533,7 +571,13 @@ namespace PHPSTORM_META {
         'composer' => \Illuminate\Support\Composer::class,
         'cookie' => \Illuminate\Cookie\CookieJar::class,
         'db' => \Illuminate\Database\DatabaseManager::class,
+<<<<<<< HEAD
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+=======
+        'db.connection' => \Illuminate\Database\MySqlConnection::class,
+        'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+        'encrypter' => \Illuminate\Encryption\Encrypter::class,
+>>>>>>> UserProfile
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -591,6 +635,10 @@ namespace PHPSTORM_META {
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
+<<<<<<< HEAD
+=======
+        'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
+>>>>>>> UserProfile
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -672,7 +720,13 @@ namespace PHPSTORM_META {
         'composer' => \Illuminate\Support\Composer::class,
         'cookie' => \Illuminate\Cookie\CookieJar::class,
         'db' => \Illuminate\Database\DatabaseManager::class,
+<<<<<<< HEAD
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+=======
+        'db.connection' => \Illuminate\Database\MySqlConnection::class,
+        'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+        'encrypter' => \Illuminate\Encryption\Encrypter::class,
+>>>>>>> UserProfile
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -730,6 +784,10 @@ namespace PHPSTORM_META {
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
+<<<<<<< HEAD
+=======
+        'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
+>>>>>>> UserProfile
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -811,7 +869,13 @@ namespace PHPSTORM_META {
         'composer' => \Illuminate\Support\Composer::class,
         'cookie' => \Illuminate\Cookie\CookieJar::class,
         'db' => \Illuminate\Database\DatabaseManager::class,
+<<<<<<< HEAD
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+=======
+        'db.connection' => \Illuminate\Database\MySqlConnection::class,
+        'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+        'encrypter' => \Illuminate\Encryption\Encrypter::class,
+>>>>>>> UserProfile
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
@@ -869,6 +933,10 @@ namespace PHPSTORM_META {
         'auth' => \Illuminate\Auth\AuthManager::class,
         'auth.driver' => \Illuminate\Auth\SessionGuard::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
+<<<<<<< HEAD
+=======
+        'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
+>>>>>>> UserProfile
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -950,7 +1018,13 @@ namespace PHPSTORM_META {
         'composer' => \Illuminate\Support\Composer::class,
         'cookie' => \Illuminate\Cookie\CookieJar::class,
         'db' => \Illuminate\Database\DatabaseManager::class,
+<<<<<<< HEAD
         'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+=======
+        'db.connection' => \Illuminate\Database\MySqlConnection::class,
+        'db.factory' => \Illuminate\Database\Connectors\ConnectionFactory::class,
+        'encrypter' => \Illuminate\Encryption\Encrypter::class,
+>>>>>>> UserProfile
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
