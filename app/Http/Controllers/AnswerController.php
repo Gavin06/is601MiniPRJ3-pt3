@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Answer;
 use App\Question;
 use Illuminate\Support\Facades\Auth;
 
-class QuestionController extends Controller
+class AnswerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,13 +29,14 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($question)
     {
-        $question = new Question;
+        $answer = new Answer;
         $edit = FALSE;
 
-        return view('questionForm', ['question' => $question,'edit' => $edit  ]);
+        return view('answerForm', ['answer' => $answer,'edit' => $edit, 'question' =>$question]);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -42,7 +44,7 @@ class QuestionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $question)
     {
         $input = $request->validate([
             'body' => 'required|min:5',
@@ -51,13 +53,13 @@ class QuestionController extends Controller
             'body.min' => 'Body must be at least 5 characters',
         ]);
         $input = request()->all();
-        $question = new Question($input);
-        $question->user()->associate(Auth::user());
-        $question->save();
-
-        return redirect()->route('home')->with('message', 'A question has been created successfully!!');
+        $question = Question::find($question);
+        $Answer = new Answer($input);
+        $Answer->user()->associate(Auth::user());
+        $Answer->question()->associate($question);
+        $Answer->save();
+        return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Your answer has been submitted successfully!!');
     }
-
 
     /**
      * Display the specified resource.
@@ -65,9 +67,10 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Question $question)
+    public function show($question,  $answer)
     {
-        return view('question')->with('question', $question);
+        $answer = Answer::find($answer);
+        return view('answer')->with(['answer' => $answer, 'question' => $question]);
     }
 
     /**
@@ -76,11 +79,12 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Question $question)
+    public function edit($question,  $answer)
     {
+        $answer = Answer::find($answer);
         $edit = TRUE;
 
-        return view('questionForm', ['question' => $question, 'edit' => $edit ]);
+        return view('answerForm', ['answer' => $answer, 'edit' => $edit, 'question'=>$question ]);
     }
 
     /**
@@ -90,7 +94,7 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Question $question)
+    public function update(Request $request, $question, $answer)
     {
         $input = $request->validate([
             'body' => 'required|min:5',
@@ -99,10 +103,11 @@ class QuestionController extends Controller
             'body.min' => 'Body must be at least 5 characters',
         ]);
 
-        $question->body = $request->body;
-        $question->save();
+        $answer = Answer::find($answer);
+        $answer->body = $request->body;
+        $answer->save();
 
-        return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Your question has been updated successfully!!');
+        return redirect()->route('answers.show',['question_id' => $question, 'answer_id' => $answer])->with('message', 'Your answer has been updated successfully!!');
     }
 
     /**
@@ -111,10 +116,11 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Question $question)
+    public function destroy($question, $answer)
     {
-        $question->delete();
+        $answer = Answer::find($answer);
+        $answer->delete();
 
-        return redirect()->route('home')->with('message', 'Your question has been deleted successfully!');
+        return redirect()->route('questions.show',['question_id' => $question])->with('message',  'Your answer has been deleted successfully!!');
     }
 }
