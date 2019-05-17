@@ -18,11 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user/{user_id}/profile/{profile_id}', 'ProfileController@show')->name('profile.show');
+Route::get('/user/{user_id}/profile', 'ProfileController@create')->name('profile.create');
+Route::post('/user/{user_id}/profile/', 'ProfileController@store')->name('profile.store');
+Route::get('/user/{user_id}/profile/{profile_id}/edit', 'ProfileController@edit')->name('profile.edit');
+Route::patch('/user/{user_id}/profile/{profile_id}', 'ProfileController@update')->name('profile.update');
 
-Auth::routes();
+Route::get('/question/{question_id}/answer/{answer_id}', 'AnswerController@show')->name('answer.show');
+Route::get('/questions/{question_id}/answers/create', 'AnswerController@create')->name('answers.create');
+Route::post('/questions/{question_id}/answers/', 'AnswerController@store')->name('answers.store');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resources([
+    'questions' => 'QuestionController',
+]);
