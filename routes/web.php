@@ -18,11 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user/{user_id}/profile/{profile_id}', 'ProfileController@show')->name('profile.show');
+Route::get('/user/{user_id}/profile', 'ProfileController@create')->name('profile.create');
+Route::post('/user/{user_id}/profile/', 'ProfileController@store')->name('profile.store');
 
-Auth::routes();
+Route::get('/question/{question_id}/answer/{answer_id}', 'AnswerController@show')->name('answer.show');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resources([
+    'questions' => 'QuestionController',
+]);
