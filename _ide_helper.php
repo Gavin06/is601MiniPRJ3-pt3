@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.17 on 2019-05-17 16:18:28.
+ * Generated for Laravel 5.8.17 on 2019-05-18 17:13:34.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14545,6 +14545,18 @@ namespace Illuminate\Support {
  
 }
 
+namespace Pusher { 
+
+    /**
+     * 
+     *
+     */ 
+    class Pusher {
+         
+    }
+ 
+}
+
 namespace Collective\Html { 
 
     /**
@@ -18385,6 +18397,8 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Pusher extends \Pusher\Pusher {}
 
     class Form extends \Collective\Html\FormFacade {}
 

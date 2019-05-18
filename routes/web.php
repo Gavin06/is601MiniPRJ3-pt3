@@ -37,3 +37,6 @@ Route::get('/questions/{question_id}/answers_sort_by_like', 'QuestionController@
 Route::resources([
     'questions' => 'QuestionController',
 ]);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
