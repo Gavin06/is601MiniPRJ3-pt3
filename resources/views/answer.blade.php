@@ -9,9 +9,11 @@
                     <div class="card-body">
                         {{$answer->body}}
                     </div>
+
                     @if ($answer->image)
                         <img src="{{asset("storage/$answer->image")}}" alt="{{$answer->image}}" class="img-fluid" alt="Responsive image">
                     @endif
+
                     <div class="card-footer">
                         <a class="btn btn-primary float-right" href="{{ route('answers.edit',['question_id'=> $question, 'answer_id'=> $answer->id])}}">
                             Edit

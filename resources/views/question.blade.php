@@ -3,16 +3,20 @@
 @section('content')
     <div class="container">
         <div class="row ">
+
             <div class="col-md-12">
+
                 <div class="card">
                     <div class="card-header">Question</div>
 
                     <div class="card-body">
 
                         {{$question->body}}
+
                         @if ($question->image)
                             <img src="{{asset("storage/$question->image")}}" alt="{{$question->image}}" class="img-fluid" alt="Responsive image">
                         @endif
+
                     </div>
                     <div class="card-footer">
                         <a class="btn btn-primary float-right"
@@ -27,14 +31,17 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class = "row top-buffer">
             <div class="col-md-12">
+
                 <div class="card">
                     <div class="card-header"><a class="btn btn-primary float-left"
                                                 href="{{ route('answers.create', ['question_id'=> $question->id])}}">
                             Reply
+
                         </a>
                         <div class="dropdown">
                             <a class="btn btn-secondary dropdown-toggle float-right" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,6 +74,7 @@
                                         <span id="likes-count-{{ $answer->id }}">{{ $answer->likes_count }}</span>
                                     </a>
 
+
                                     <a class="btn btn-primary float-right"
                                        href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
                                         View
@@ -76,14 +84,17 @@
                             </div>
                         @empty
                             <div class="card">
+
                                 <div class="card-body"> No Answers</div>
                             </div>
 
                         @endforelse
 
+
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 @endsection

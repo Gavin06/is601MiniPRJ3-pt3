@@ -8,6 +8,7 @@
                     <div class="card-header">Create Question</div>
                     <div class="card-body">
                         @if($edit === FALSE)
+
                             {!! Form::model($question, ['action' => 'QuestionController@store', 'enctype' => 'multipart/form-data']) !!}
                             @csrf
                             <div class="form-group">
@@ -33,6 +34,7 @@
                                 <img src="{{asset("storage/$question->image")}}" alt="{{$question->image}}" class="img-fluid" alt="Responsive image">
                             @endif
                         @endif
+
 
                     </div>
 

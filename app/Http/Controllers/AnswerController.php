@@ -6,12 +6,15 @@ use Illuminate\Http\Request;
 use App\Answer;
 use App\Question;
 use Illuminate\Support\Facades\Auth;
+
+
 use App\Traits\UploadTrait;
 
 class AnswerController extends Controller
 {
 
     use UploadTrait;
+
 
     /**
      * Display a listing of the resource.
@@ -50,6 +53,7 @@ class AnswerController extends Controller
      */
     public function store(Request $request, $question)
     {
+
         $request->validate([
             'body' => 'required|min:5',
             'image.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
@@ -76,6 +80,7 @@ class AnswerController extends Controller
             $answer->image = $filePath;
         }
         $answer->save();
+
 
         return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Your answer has been submitted successfully!!');
     }

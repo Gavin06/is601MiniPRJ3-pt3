@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Question;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Profile;
@@ -69,7 +71,6 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
 
     public function show($id)
     {
