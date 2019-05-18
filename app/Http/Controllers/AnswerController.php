@@ -6,9 +6,13 @@ use Illuminate\Http\Request;
 use App\Answer;
 use App\Question;
 use Illuminate\Support\Facades\Auth;
+use App\Traits\UploadTrait;
 
 class AnswerController extends Controller
 {
+
+    use UploadTrait;
+
     /**
      * Display a listing of the resource.
      *
@@ -46,18 +50,33 @@ class AnswerController extends Controller
      */
     public function store(Request $request, $question)
     {
-        $input = $request->validate([
+        $request->validate([
             'body' => 'required|min:5',
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
         ], [
             'body.required' => 'Body is required',
             'body.min' => 'Body must be at least 5 characters',
+            'image.image' => 'The image must be an image.',
+            'image.mimes' => 'file type must be jpeg, png, jpg, or gif',
+            'image.max' => 'file size  must be less than  2 MB',
         ]);
         $input = request()->all();
+        $answer = new Answer($input);
         $question = Question::find($question);
-        $Answer = new Answer($input);
-        $Answer->user()->associate(Auth::user());
-        $Answer->question()->associate($question);
-        $Answer->save();
+        $answer->user()->associate(Auth::user());
+        $answer->question()->associate($question);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            $name = $answer->user_id . '_' . $answer->question_id . '_' . time();
+            $folder = '/uploads/images/';
+            $filePath = $folder . $name . '.' . $image->getClientOriginalExtension();
+            $this->uploadOne($image, $folder, 'public', $name);
+            $answer->image = $filePath;
+        }
+        $answer->save();
+
         return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Your answer has been submitted successfully!!');
     }
 
@@ -79,9 +98,12 @@ class AnswerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($question,  $answer)
     {
-        //
+        $answer = Answer::find($answer);
+        $edit = TRUE;
+
+        return view('answerForm', ['answer' => $answer, 'edit' => $edit, 'question'=>$question ]);
     }
 
     /**
@@ -91,9 +113,20 @@ class AnswerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $question, $answer)
     {
-        //
+        $input = $request->validate([
+            'body' => 'required|min:5',
+        ], [
+            'body.required' => 'Body is required',
+            'body.min' => 'Body must be at least 5 characters',
+        ]);
+
+        $answer = Answer::find($answer);
+        $answer->body = $request->body;
+        $answer->save();
+
+        return redirect()->route('answers.show',['question_id' => $question, 'answer_id' => $answer])->with('message', 'Your answer has been updated successfully!!');
     }
 
     /**
@@ -102,8 +135,11 @@ class AnswerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($question, $answer)
     {
-        //
+        $answer = Answer::find($answer);
+        $answer->delete();
+
+        return redirect()->route('questions.show',['question_id' => $question])->with('message',  'Your answer has been deleted successfully!!');
     }
 }

@@ -6,7 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Questions
-
+                        <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
+                            Create
+                        </a>
                         <div class="card-body">
 
                             <div class="card-deck">
@@ -22,11 +24,14 @@
                                             </div>
                                             <div class="card-body">
                                                 <p class="card-text">{{$question->body}}</p>
+                                                @if ($question->image)
+                                                    <img src="{{asset("storage/$question->image")}}" alt="{{$question->image}}" class="img-fluid" alt="Responsive image">
+                                                @endif
                                             </div>
                                             <div class="card-footer">
                                                 <p class="card-text">
 
-                                                    <a class="btn btn-primary float-right" href="#">
+                                                    <a class="btn btn-primary float-right" href="{{ route('questions.show', ['id' => $question->id]) }}">
                                                         View
                                                     </a>
                                                 </p>
@@ -34,9 +39,8 @@
                                         </div>
                                     </div>
                                 @empty
-                                    There are no questions to view, you can  create a question.
+                                    There are no questions to view, let’s create a question now!
                                 @endforelse
-
 
                             </div>
 
