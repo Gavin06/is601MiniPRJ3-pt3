@@ -5,7 +5,9 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2019-05-17 00:47:18.
+
+     * Generated on 2019-05-17 16:18:44.
+
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -123,8 +125,10 @@ namespace PHPSTORM_META {
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
+        'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'html' => \Collective\Html\HtmlBuilder::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
@@ -264,8 +268,10 @@ namespace PHPSTORM_META {
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
+        'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'html' => \Collective\Html\HtmlBuilder::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
@@ -405,8 +411,10 @@ namespace PHPSTORM_META {
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
+        'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'html' => \Collective\Html\HtmlBuilder::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
@@ -546,8 +554,10 @@ namespace PHPSTORM_META {
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
+        'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'html' => \Collective\Html\HtmlBuilder::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
@@ -687,8 +697,10 @@ namespace PHPSTORM_META {
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
+        'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'html' => \Collective\Html\HtmlBuilder::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
@@ -828,8 +840,10 @@ namespace PHPSTORM_META {
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
+        'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'html' => \Collective\Html\HtmlBuilder::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
@@ -969,8 +983,10 @@ namespace PHPSTORM_META {
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
+        'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'html' => \Collective\Html\HtmlBuilder::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,

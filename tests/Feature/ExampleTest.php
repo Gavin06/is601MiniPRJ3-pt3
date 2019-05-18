@@ -4,9 +4,14 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Events\AnswerAction;
+use App\Answer;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
 
-class exampleTest extends TestCase
+class ExampleTest extends TestCase
 {
+
     /**
      * A basic test example.
      *
@@ -18,4 +23,5 @@ class exampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
 }
